@@ -2,6 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 
+Concepts covered - 
+ -- Navigation (Routing)
+ -- Angular security
+ -- Eager loading 
+ -- Lazy loading
+ -- Reactive forms
+ -- Custom class-based synchronous form group validator 
+ -- Custom class-based asynchronous form control validator 
+ -- RxJs observables, operators (Behavior Subject, tap, skipWhile, take, map, catchError, filter)
+ -- Dependency injection
+ -- Async pipe in template
+ -- HTTP interceptors
+ -- Guard (restrict access to routes)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 
 import { MatchPassword } from '../validators/match-password';
 import { UniqueUsername } from '../validators/unique-username';
-import { AuthService, SignupCredentials } from '../auth.service';
+import { AuthService } from '../auth.service';
+import { SignupCredentials } from '../auth';
 
 @Component({
   selector: 'app-signup',

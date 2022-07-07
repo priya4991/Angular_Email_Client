@@ -1,0 +1,18 @@
+<!-- using a Resolver to make sure that we never get undefined email -->
+<!-- resolver will show this component only when we have an email to display -->
+<div class="header">
+    <div>
+        <h3>{{ email.subject }}</h3>
+    <div>
+        From: <i>{{ email.from }}</i>
+    </div>
+    <div>
+        To: <i>{{ email.to }}</i>
+    </div>
+    </div>
+</div>
+
+<div class="ui divider"></div>
+
+<div [innerHTML]="email.html">
+</div>

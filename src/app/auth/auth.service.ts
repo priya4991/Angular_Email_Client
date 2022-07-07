@@ -2,22 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
-
-export interface SignupCredentials {
-  username: string,
-  password: string,
-  passwordConfirmation: string;
-};
-
-interface SignedinResponse { 
-  authenticated: boolean, 
-  username: string | null
-};
-
-export interface SigninCredentials {
-  username: string,
-  password: string
-};
+import { SignupCredentials, SignedinResponse, SigninCredentials } from './auth';
 
 @Injectable({
   providedIn: 'root'

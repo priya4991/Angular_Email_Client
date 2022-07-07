@@ -4,17 +4,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Concepts covered - 
  -- Navigation (Routing)
+ -- Child route
  -- Angular security
  -- Eager loading 
  -- Lazy loading
  -- Reactive forms
  -- Custom class-based synchronous form group validator 
  -- Custom class-based asynchronous form control validator 
- -- RxJs observables, operators (Behavior Subject, tap, skipWhile, take, map, catchError, filter)
+ -- RxJs observables, operators (Behavior Subject, EMPTY, tap, skipWhile, take, map, catchError, filter, switchMap)
  -- Dependency injection
  -- Async pipe in template
  -- HTTP interceptors
  -- Guard (restrict access to routes)
+ -- Resolver
 
 ## Development server
 

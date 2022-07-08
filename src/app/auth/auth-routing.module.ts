@@ -6,9 +6,10 @@ import { SignoutComponent } from './signout/signout.component';
 
 const routes: Routes = [
   //eagerly loaded module
+  { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent },
   { path: 'signout', component: SignoutComponent },
-  { path: '', component: SigninComponent }
+  // { path: '', canActivate: [HomePageGuard] }
 ];
 
 @NgModule({

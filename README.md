@@ -17,6 +17,11 @@ Concepts covered -
  -- HTTP interceptors
  -- Guard (restrict access to routes)
  -- Resolver
+ -- Event stopPropagation
+ -- Ng Container, Ng Content, *NgIf, *NgFor
+ -- @Input(), @Output()
+ -- Provider
+ -- ngOnChanges()
 
 ## Development server
 

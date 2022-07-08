@@ -17,4 +17,8 @@ export class EmailService {
   getEmail(id: string) {
     return this.http.get<Email>(this.apiUrl + '/' + id);
   }
+
+  sendEmail(email: Email) {
+    return this.http.post<Email>(this.apiUrl, email);
+  }
 }

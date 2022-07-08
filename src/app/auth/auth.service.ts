@@ -9,6 +9,7 @@ import { SignupCredentials, SignedinResponse, SigninCredentials } from './auth';
 })
 export class AuthService {
   apiUrl = 'https://api.angular-email.com/auth';
+  username = '';
 
   //community convention to add $ at the end of an observable
   signedin$: any = new BehaviorSubject(null); //can assign a initial value to BehaviorSubject
@@ -26,8 +27,9 @@ export class AuthService {
     return this.http.post<{ username: string }>(this.apiUrl + '/signup', credentials)
       .pipe(
         //error coming out of the observable will skip over the tap operator
-        tap(() => {
+        tap(({ username }) => {
           this.signedin$.next(true);
+          this.username = username;
         })
     );
   }
@@ -36,8 +38,9 @@ export class AuthService {
     //interceptor is setting withCredentials
     return this.http.get<SignedinResponse>(this.apiUrl + '/signedin')
       .pipe(
-        tap(({ authenticated }) => {
+        tap(({ authenticated, username }) => {
             this.signedin$.next(authenticated);
+            this.username = username;
         })
       );
   }
@@ -52,10 +55,11 @@ export class AuthService {
   }
 
   signin(credentials: SigninCredentials) {
-    return this.http.post<any>(this.apiUrl + '/signin', credentials)
+    return this.http.post<{ username: string }>(this.apiUrl + '/signin', credentials)
     .pipe(
-      tap(() => {
+      tap(({ username }) => {
         this.signedin$.next(true);
+        this.username = username;
       })
     );
   }

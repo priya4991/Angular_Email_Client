@@ -6,7 +6,7 @@ export interface SignupCredentials {
 
 export interface SignedinResponse {
     authenticated: boolean;
-    username: string | null;
+    username: string;
 };
 
 export interface SigninCredentials {
